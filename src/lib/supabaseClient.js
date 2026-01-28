@@ -19,17 +19,14 @@ if (!supabaseAnonKey) {
 }
 
 // Create and export the Supabase client
-// We use placeholders if keys are missing to prevent createClient from throwing "supabaseUrl is required"
-// This allows the app to boot and use fallback data via isSupabaseConfigured() checks
-export const supabase = createClient(
-  supabaseUrl || 'https://placeholder.supabase.co',
-  supabaseAnonKey || 'placeholder-key',
-  {
-    auth: {
-      persistSession: false, // No auth needed for public reads
-    },
-  }
-);
+// We return null if keys are missing to prevent createClient from throwing "supabaseUrl is required" during build
+export const supabase = (supabaseUrl && supabaseAnonKey)
+  ? createClient(supabaseUrl, supabaseAnonKey, {
+      auth: {
+        persistSession: false, // No auth needed for public reads
+      },
+    })
+  : null;
 
 /**
  * Helper to check if Supabase is properly configured
