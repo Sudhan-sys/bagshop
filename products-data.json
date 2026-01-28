@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Luxury Leather Tote",
+    "price": 4999,
+    "mrp": 7999,
+    "stock": 50,
+    "description": "A premium leather tote bag perfect for office and travel.",
+    "highlights": ["Genuine Leather", "Laptop Compartment", "Water Resistant"],
+    "specifications": { "Material": "Leather", "Color": "Brown", "Warranty": "1 Year" },
+    "images": [
+      "https://images.unsplash.com/photo-1591561954557-26941169b49e?w=800&q=80",
+      "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=800&q=80"
+    ]
+  },
+  {
+    "title": "Urban Canvas Backpack",
+    "price": 2499,
+    "mrp": 3999,
+    "stock": 100,
+    "description": "Durable canvas backpack for daily commute.",
+    "highlights": ["Lightweight", "Multiple Pockets", "Unisex Design"],
+    "specifications": { "Material": "Canvas", "Color": "Grey", "Capacity": "20L" },
+    "images": [
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80"
+    ]
+  }
+]
