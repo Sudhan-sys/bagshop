@@ -36,7 +36,7 @@ export default function LoginPage() {
           password,
         });
         if (error) throw error;
-        router.push('/admin');
+        router.push('/');
         router.refresh();
       }
     } catch (err) {
@@ -63,10 +63,10 @@ export default function LoginPage() {
         maxWidth: '400px'
       }}>
         <h1 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem', textAlign: 'center' }}>
-          {mode === 'login' ? 'Admin Login' : 'Create Account'}
+          {mode === 'login' ? 'Welcome Back' : 'Create Account'}
         </h1>
         <p style={{ color: '#666', fontSize: '0.875rem', marginBottom: '1.5rem', textAlign: 'center' }}>
-          {mode === 'login' ? 'Sign in to access the admin panel' : 'Sign up with your email'}
+          {mode === 'login' ? 'Sign in to access your account' : 'Sign up for exclusive offers'}
         </p>
 
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
